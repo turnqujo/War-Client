@@ -12,6 +12,18 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
+const ws = new WebSocket('ws://localhost:3002/');
+ws.onmessage = (event: any) => console.log(JSON.parse(event.data));
+ws.onopen = () =>
+  ws.send(
+    JSON.stringify({
+      suits: 4,
+      ranks: 13,
+      players: 2,
+      seed: 'Hello from the websocket client!'
+    })
+  );
+
 (async () =>
   console.log(
     await postData('http://localhost:3001/api/', {
