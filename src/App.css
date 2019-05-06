@@ -21,6 +21,11 @@
   color: white;
 }
 
+.example-container {
+  width: 50vw;
+  border: 1px dashed gray;
+}
+
 .App-link {
   color: #61dafb;
 }

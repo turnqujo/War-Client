@@ -1,0 +1,25 @@
+.range-slider {
+  --knob-size: 12px;
+
+  display: flex;
+  height: var(--knob-size);
+  margin: 1px calc(var(--knob-size) / 2);
+  position: relative;
+
+  &__knob--left,
+  &__knob--right {
+    left: 0%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: left 1s ease;
+
+    &::before {
+      border-radius: 100%;
+      border: 1px solid white;
+      content: '';
+      display: block;
+      height: var(--knob-size);
+      width: var(--knob-size);
+    }
+  }
+}

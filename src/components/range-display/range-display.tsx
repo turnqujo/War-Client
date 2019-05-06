@@ -10,7 +10,7 @@ const RangeDisplay: React.FC<Props> = (props: Props) => (
   <div className="range-display">
     <h3 className="range-display__header">Turns</h3>
     <span className="range-display__counter">
-      {props.start}&nbsp;-&nbsp;{props.end}
+      {props.start} - {props.end}
     </span>
   </div>
 );
