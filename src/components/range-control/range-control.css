@@ -1,0 +1,29 @@
+.range-control {
+  &--error {
+    border: 1px solid red;
+  }
+
+  &__input-container {
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  &__separator {
+    margin: 0 6px;
+  }
+
+  &__submit {
+    background: none;
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 6px;
+    transition: border 1s ease, color 1s ease;
+
+    &:disabled {
+      border: 1px solid gray;
+      color: gray;
+    }
+  }
+}

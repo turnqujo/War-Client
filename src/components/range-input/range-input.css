@@ -1,0 +1,14 @@
+.range-input {
+  background: none;
+  border: 1px solid invisible;
+  border-bottom: 1px solid white;
+  color: white;
+  text-align: right;
+  width: 3em;
+  outline: none;
+
+  &--error {
+    border: 1px solid red;
+    color: red;
+  }
+}

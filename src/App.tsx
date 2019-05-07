@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import RangeSlider from './components/range-slider/range-slider';
-import RangeDisplay from './components/range-display/range-display';
+import RangeDisplay from './components/range-control/range-control';
+import { Range } from './models/range';
 
 const App: React.FC = () => {
+  const domain: Range = { start: 1, end: 100 };
+  const initial: Range = { start: 1, end: 10 };
   return (
     <div className="App">
       <header className="App-header">
         <div className="example-container">
-          <RangeDisplay start={1} end={10} />
-          <RangeSlider domain={{ start: 1, end: 100 }} initial={{ start: 1, end: 10 }} onUpdate={console.log} />
+          <RangeDisplay domain={domain} initial={initial} onChange={(newRange: Range) => console.log(newRange)} />
         </div>
       </header>
     </div>
