@@ -7,6 +7,6 @@ describe('The Range display Component', () => {
   const usualInitial = { start: 1, end: 10 };
 
   test('renders without crashing.', () => {
-    shallow(<RangeControl domain={usualDomain} initial={usualInitial} onChange={() => { }} />);
+    shallow(<RangeControl domain={usualDomain} initial={usualInitial} onChange={() => {}} />);
   });
 });
