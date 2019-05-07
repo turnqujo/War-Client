@@ -1,7 +1,8 @@
+import { List, Map } from 'immutable';
 import React from 'react';
-import { Map, List } from 'immutable';
-import TableHeaderCell from './table-header-cell';
+import './game-table.css';
 import TableCell from './table-cell';
+import TableHeaderCell from './table-header-cell';
 
 interface Props {
   headerCells?: Map<string, string>;
@@ -10,9 +11,9 @@ interface Props {
 }
 
 const GameTable: React.FC<Props> = (props: Props) => (
-  <div className="game-table">
+  <table className="game-table">
     {!props.headerCells ? null : (
-      <div className="game-table__header">
+      <thead className="game-table__header">
         {props.headerCells
           .map((label: string, key: string) => (
             <TableHeaderCell key={key} column={key} sortAscending={true} onToggleSort={props.onToggleSort}>
@@ -20,14 +21,14 @@ const GameTable: React.FC<Props> = (props: Props) => (
             </TableHeaderCell>
           ))
           .toList()}
-      </div>
+      </thead>
     )}
     {props.cells.map((row: Map<string, React.ReactChild>, i: number) => (
-      <div key={i} className="game-table__row">
+      <tbody key={i} className="game-table__row">
         {row.map((content: React.ReactChild, column: string) => <TableCell key={column}>{content}</TableCell>).toList()}
-      </div>
+      </tbody>
     ))}
-  </div>
+  </table>
 );
 
 export default GameTable;

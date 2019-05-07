@@ -1,2 +1,14 @@
 .game-table {
+  border-collapse: collapse;
+  border: 1px solid gray;
+
+  &__header {
+    background-color: gray;
+    color: white;
+    text-align: center;
+  }
+
+  &__row:nth-child(even) {
+    background-color: snow;
+  }
 }

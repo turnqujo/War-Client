@@ -1,2 +1,4 @@
 .table-header-cell {
+  padding: 6px 4px;
+  border: 1px solid gray;
 }

@@ -1,5 +1,6 @@
-import React from 'react';
 import classnames from 'classnames';
+import React from 'react';
+import './table-header-cell.css';
 
 interface Props {
   children: React.ReactChild;
@@ -15,9 +16,9 @@ const TableHeaderCell: React.FC<Props> = (props: Props) => {
   });
 
   return (
-    <div className={classes} onClick={() => props.onToggleSort(props.column)}>
+    <th className={classes} onClick={() => props.onToggleSort(props.column)}>
       {props.children}
-    </div>
+    </th>
   );
 };
 
