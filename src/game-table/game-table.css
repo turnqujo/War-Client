@@ -3,8 +3,6 @@
   border: 1px solid gray;
 
   &__header {
-    background-color: gray;
-    color: white;
     text-align: center;
   }
 
