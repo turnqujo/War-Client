@@ -1,0 +1,19 @@
+.table-header-cell {
+  background-color: lightsteelblue;
+  border: 1px solid gray;
+  padding: 6px 4px;
+  cursor: pointer;
+  user-select: none;
+
+  &--asc::after {
+    content: 'ASC';
+  }
+
+  &--desc::after {
+    content: 'DESC';
+  }
+
+  &::after {
+    margin-left: 6px;
+  }
+}

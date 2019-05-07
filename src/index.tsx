@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { postData } from './fetch-util';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { postData } from './fetch-util';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
