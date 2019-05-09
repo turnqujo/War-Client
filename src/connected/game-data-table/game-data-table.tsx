@@ -32,8 +32,8 @@ const cells = List([
   Map({ [state.GameColumn.turn]: 3, [state.GameColumn.playersRemaining]: 1 })
 ]);
 
-type ConnectedDispatch = Props & typeof GameDataTableActions;
-const GameDataTable: React.FC<ConnectedDispatch> = (props: ConnectedDispatch) => (
+type ConnectedProps = Props & typeof GameDataTableActions;
+const GameDataTable: React.FC<ConnectedProps> = (props: ConnectedProps) => (
   <div className="game-data-table">
     <RangeControl domain={domain} initial={initial} onChange={(newRange: Range) => console.log(newRange)} />
     <Table
