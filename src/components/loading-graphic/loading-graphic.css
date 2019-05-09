@@ -1,4 +1,50 @@
 .loading-graphic {
   height: auto;
   width: 256px;
+
+  &__card-container {
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-box: border-box;
+    transform-origin: bottom;
+
+    &.left {
+      animation-name: play-card-from-left;
+    }
+
+    &.right {
+      animation-name: play-card-from-right;
+    }
+  }
+
+  @keyframes play-card-from-left {
+    0% {
+      transform: translateX(-100%) rotate(90deg);
+    }
+
+    25%,
+    75% {
+      transform: translateX(0) rotate(0);
+    }
+
+    100% {
+      transform: translateX(-100%) rotate(-45deg);
+    }
+  }
+
+  @keyframes play-card-from-right {
+    0% {
+      transform: translateX(100%) rotate(-90deg);
+    }
+
+    25%,
+    75% {
+      transform: translateX(0) rotate(0);
+    }
+
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
 }

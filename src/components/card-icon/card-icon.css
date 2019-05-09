@@ -1,0 +1,37 @@
+.card-icon {
+  font-size: xx-small;
+
+  &.hearts,
+  &.diamonds {
+    fill: red;
+  }
+
+  &.spades,
+  &.clubs {
+    fill: black;
+  }
+
+  &__pattern {
+    &-background {
+      fill: darkgray;
+      width: 100%;
+      heigght: 100%;
+    }
+
+    &-circle {
+      stroke: none;
+      fill: lightgrey;
+    }
+  }
+
+  &__outline {
+    fill: white;
+    height: 32px;
+    rx: 3px;
+    width: 24px;
+
+    &--back {
+      fill: url('#card-back');
+    }
+  }
+}
